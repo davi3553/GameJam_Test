@@ -9,9 +9,14 @@
 var move_count = abs(vel_x);
 var move_amount = sign(vel_x);
 
-/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+/// @DnDAction : YoYo Games.Loops.Repeat
 /// @DnDVersion : 1
-/// @DnDHash : 0F83CFD7
-/// @DnDArgument : "value" "move_speed"
-/// @DnDArgument : "value_relative" "1"
-x += move_speed;
+/// @DnDHash : 7E3AA6CF
+/// @DnDArgument : "times" "move_count"
+repeat(move_count){	/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+	/// @DnDVersion : 1
+	/// @DnDHash : 0F83CFD7
+	/// @DnDParent : 7E3AA6CF
+	/// @DnDArgument : "value" "move_amount"
+	/// @DnDArgument : "value_relative" "1"
+	x += move_amount;}
